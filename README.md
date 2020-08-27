@@ -13,14 +13,15 @@ Here are a few things you should know before contributing to the website
 
 ## TODOs
 - Use Adobe Dreamweaver to get a design of the website
-	- Pages: Accessed by interactive Header
-	    - Front page: Vanguard introduction and Most Current Articles
-	    - Sports
-	    - On Campus
-	    - Off Campus
-	    - Features
-	    - Arts
-    - Sort by author name and issue on each page
+    - Front page: Vanguard introduction and Most Current Articles
+    - Sports page: Most current Sports Articles
+    - On Campus page: same as above
+    - Off Campus page
+    - Features page
+    - Arts page
+    - Search page: Search and filtering articles
+    	- User can search up article names, and they will get the articles with the closest match
+		- They can also filter articles by Issues, Authors, and Topic (Sports, On Campus, Off Campus, Feautures, Arts)
 - Use GSAP to animate webpage
 - Create SQL Database to store articles
 - Write sorting and filtering algorithm for the articles

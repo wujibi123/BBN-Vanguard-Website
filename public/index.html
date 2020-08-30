@@ -10,8 +10,11 @@
     <!-- include only the Firebase features as you need -->
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
   </head>
   <body>
+
+    <iframe src="" style="width: 660px; height:  300px;" frameborder="0" id="1"></iframe>
 
     <script>
       // Your web app's Firebase configuration
@@ -27,13 +30,23 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
 
       // Initialize Cloud Functions through Firebase
       var functions = firebase.functions();
-      var getDatabase = firebase.functions().httpsCallable('getDatabase');
-      getDatabase().then(function(result) {
-        // Read result of the Cloud Function.
-        console.log(result.data.test);
+
+      var docRef = db.collection("data").doc("articles");
+
+      docRef.get().then(function(doc) {
+          if (doc.exists) {
+              console.log("Document data:", doc.data());
+              document.getElementById("1").src = doc.data().article1.link;
+          } else {
+              // doc.data() will be undefined in this case
+              console.log("No such document!");
+          }
+      }).catch(function(error) {
+          console.log("Error getting document:", error);
       });
     </script>
   </body>

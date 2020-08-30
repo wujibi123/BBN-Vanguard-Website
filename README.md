@@ -25,23 +25,21 @@ Strike through means completed
     	- User can search up article names, and they will get the articles with the closest match
 		- They can also filter articles by Issues, Authors, and Topic (Sports, On Campus, Off Campus, Feautures, Arts)
 - Use GSAP to animate webpage
+- Use @media to design webpage for the phone, use BCT's css for inspiration
 - Create Database to store articles
-	- Use Firebase Database and Functions to retreive data
+	- Use Firebase **Firestore** and Functions to retreive data
 		- ~~Test firebase functions, make sure that they are callable from client side~~
+		- Can't use the real time database because there's no blocking function for retrieving data
 - Write sorting and filtering algorithm for the articles
 
 ## NOTES
 
-General
-	- All files should be in php
-		- Needed for server side code
-
 How to show articles
-	- Upload PDFs to google drive
-	- Embed the PDFs with iframe
-	- In SQL database, store the embed link instead of the actual PDFs
+- Upload PDFs to google drive
+- Embed the PDFs with iframe
+- In SQL database, store the embed link instead of the actual PDFs
 
 Libraries Used
-	- GSAP
-	- Firebase (Only for hosting so far)
-	- SQL
+- GSAP
+- Firebase (Only for hosting so far)
+- SQL

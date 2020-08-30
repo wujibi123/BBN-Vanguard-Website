@@ -26,10 +26,15 @@ Strike through means completed
 		- They can also filter articles by Issues, Authors, and Topic (Sports, On Campus, Off Campus, Feautures, Arts)
 - Use GSAP to animate webpage
 - Use @media to design webpage for the phone, use BCT's css for inspiration
-- Create Database to store articles
+- Create Database to store and **display articles**
 	- Use Firebase **Firestore** and Functions to retreive data
-		- ~~Test firebase functions, make sure that they are callable from client side~~
 		- Can't use the real time database because there's no blocking function for retrieving data
+		- ~~Creat Testing Version of the Database~~
+		- ~~Show PDF on page~~
+		- Use firebase Querys to systematically show articles by date
+		- **Later, after design is done**
+			- Write the real database
+			- Sort articles by title, issue, and name
 - Write sorting and filtering algorithm for the articles
 
 ## NOTES

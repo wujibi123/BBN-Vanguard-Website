@@ -5,7 +5,9 @@ var sidebar = document.getElementById("sidebar");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  console.log("Scrolling");
-  sidebar.style.top = 41 + document.body.scrollTop;
-  console.log(document.body.scrollTop);
+	var scrollTop = document.documentElement.scrollTop;
+	var sidebarMargin = 41+ scrollTop;
+  if ((sidebarMargin + sidebar.offsetHeight) < document.getElementById("mainContent").offsetHeight) {
+    sidebar.style.marginTop = sidebarMargin + "px";
+  }
 }

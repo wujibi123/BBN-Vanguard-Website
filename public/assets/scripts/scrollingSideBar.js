@@ -6,8 +6,9 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 	var scrollTop = document.documentElement.scrollTop;
-	var sidebarMargin = 41+ scrollTop;
+	var sidebarMargin = 41 + scrollTop;
   if ((sidebarMargin + sidebar.offsetHeight) < document.getElementById("mainContent").offsetHeight) {
     sidebar.style.marginTop = sidebarMargin + "px";
   }
 }
+// TRY TURNING STICKY ON AND OFF??????

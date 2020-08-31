@@ -14,21 +14,24 @@ Here are a few things you should know before contributing to the website
 ## TODOs
 Strike through means completed
 
-- Use Adobe Dreamweaver to get a design of the website
-    - Front page: Vanguard introduction and Most Current Articles
-    - Sports page: Most current Sports Articles
-    - On Campus page: same as above
-    - Off Campus page
-    - Features page
-    - Arts page
-    - Search page: Search and filtering articles
+- ~~Use Adobe Dreamweaver to get a design of the website~~
+- Improve Design of the website
+	- Single one page app
+		- Switch between "pages" by simply changing the innerHTML. Each switch is just displaying different documents.
+    - Search Bar
     	- User can search up article names, and they will get the articles with the closest match
-		- They can also filter articles by Issues, Authors, and Topic (Sports, On Campus, Off Campus, Feautures, Arts)
+	- Advanced Options
+		- A button that reveals filters
+		- Issues, Authors, and Topic (Sports, On Campus, Off Campus, Feautures, Arts)
+	- Subscribe form needs to redirect to https://www.bbns.org/cf_forms/view.cfm?formID=303.
+	- Fix scrollin side bar. Stutters a lot
+		- Perhaps try turning "sticky" on/off.
+
 - Use GSAP to animate webpage
 - Use @media to design webpage for the phone, use BCT's css for inspiration
-- Create Database to store and **display articles**
-	- Use Firebase **Firestore** and Functions to retreive data
-		- Can't use the real time database because there's no blocking function for retrieving data
+- ~~Create Database to store and **display articles**~~
+	- ~~Use Firebase **Firestore** and Functions to retreive data~~
+		- *Can't use the real time database because there's no blocking function for retrieving data*
 		- ~~Creat Testing Version of the Database~~
 		- ~~Show PDF on page~~
 		- Use firebase Querys to systematically show articles by date

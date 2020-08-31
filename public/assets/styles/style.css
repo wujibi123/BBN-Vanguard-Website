@@ -64,22 +64,6 @@ header nav a {
 	font-weight: 200;
 	text-align: justify;
 }
-#content #mainContent #authorInfo {
-	/* Author info section */
-	background-color: rgba(208,207,207,1.00);
-}
-#content #mainContent #authorInfo h2, #content #mainContent #authorInfo p {
-	color: rgba(255,255,255,1.00);
-	padding-left: 2%;
-	padding-top: 11px;
-}
-#content #mainContent #authorInfo p {
-	color: rgba(255,255,255,1.00);
-	padding-left: 2%;
-	padding-top: 0px;
-	padding-bottom: 11px;
-	padding-right: 2%;
-}
 #mainContent {
 	/* Container for the blog post in individal blog view */
 	width: 71%;
@@ -89,7 +73,7 @@ header nav a {
 }
 
 #mainContent iframe {
-	width:603px;
+	width:100%;
 }
 
 #mainwrapper #content #sidebar {
@@ -101,6 +85,7 @@ header nav a {
 	background-color: rgba(246,246,246,1.00);
 	margin-top: 41px;
 	padding-bottom:32px;
+	position: absolute;
 }
 #mainwrapper {
 	/* Container of all content */

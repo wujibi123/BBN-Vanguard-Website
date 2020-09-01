@@ -23,6 +23,8 @@ Strike through means completed
 	- Advanced Options
 		- ~~A button that reveals filters~~
 		- ~~Issues, Authors,~~ and Topic (Sports, On Campus, Off Campus, Feautures, Arts)
+		- A button that closes filters
+		- A button that submits filters
 		- Need to add logic to the filters
 			- Figure out how to retrieve the value from a **DataList**
 		- Style the filters

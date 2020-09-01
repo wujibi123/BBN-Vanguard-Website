@@ -1,39 +1,50 @@
 @charset "UTF-8";
 
+body {
+	background-color: #f6f4e6;
+	margin:0px;
+}
 a:link {
   text-decoration: none;
 }
 
 #mainwrapper header {
 	/*Header */
-	background-color: rgba(208,207,207,1.00);
-	overflow: auto;
+	background-color: #52575d;
+	color:white;
+	overflow: hidden;
 	font-family: montserrat, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-}
-#mainwrapper header #logo {
-	/* Company Logo text */
-	width: 4%;
-	float: left;
-	padding-left: 2%;
-	padding-top: 12px;
-	color: transparent;
+	height:3rem;
 }
 #mainwrapper header nav {
 	/*Nav bar containing links in header */
 	text-align: right;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	line-height: 2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 	padding-right: 2%;
 	width: 68%;
-	float: left;
-	color: rgba(146,146,146,1.00);
+	float: right;
 }
-header nav a {
+
+header img {
+	/* Logo for header */
+	height:2rem;
+	vertical-align: 50%;
+	padding-left:2%;
+	padding-top:0.5rem;
+	padding-bottom:0.5rem;
+}
+
+#mainwrapper header nav a {
 	/* Links in header */
 	padding-right: 2%;
+	text-decoration: none;
+	color:white;
 }
+
 #content #mainContent h1, #content #mainContent h2 {
 	/* Styling for main headings */
 	color: rgba(146,146,146,1.00);
@@ -59,7 +70,7 @@ header nav a {
 }
 #content #mainContent p {
 	/* All paragraphs under maincontent */
-	color: rgba(146,146,146,1.00);
+	color: #41444b;;
 	font-family: source-sans-pro, sans-serif;
 	font-style: normal;
 	font-weight: 200;
@@ -83,7 +94,7 @@ header nav a {
 	padding-left: 2%;
 	padding-right: 2%;
 	float: right;
-	background-color: rgba(246,246,246,1.00);
+	background-color: #fddb3a;
 	margin-top: 41px;
 	padding-bottom:32px;
 }
@@ -107,6 +118,11 @@ header nav a {
 	cursor: pointer;
 	background-color: lightyellow;
 	color: rgba(146,146,146,1.00);
+	transition: all .3s ease-in-out;
+}
+#mainwrapper #content #sidebar button:hover{
+	background-color: #004cf5;
+	color: white;
 }
 #mainwrapper #content #sidebar form {
 	width:100%;
@@ -145,6 +161,34 @@ header nav a {
 	display: none;
 }
 
+.active{
+    border-bottom: 2px solid #004DF5;
+    color: #41444b;
+}
+
+nav ul li a::after{
+    position: absolute;
+    content: ' ';
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #004DF5;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all .3s ease-in-out;
+}
+
+nav ul li a:hover::after{
+	/* Animation for sidebar links */
+    transform: scaleX(1);
+    transform-origin: right;
+}
+nav ul li a:hover{
+	/* Animation for sidebar links */
+    color: #41444b;
+}
+
 nav ul li {
 	list-style-type: none;
 	padding-top: 8px;
@@ -154,8 +198,11 @@ nav ul {
 	padding-left: 0%;
 }
 nav ul li a {
-	color: rgba(146,146,146,1.00);
+	color: gray;
 	text-decoration: none;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    transition: all .5s;
 }
 footer {
 	/* Container for footer artices */
@@ -298,22 +345,12 @@ footer .bold{
 	/* Actual banner image */
 	width: 100%;
 }
-#mainwrapper header nav a {
-	/* Links in header */
-	color: rgba(146,146,146,1.00);
-	text-decoration: none;
-}
 
 /* Tablet view */
 @media screen and (max-width:769px) {
+	
 .notOnDesktop {
-	/* Search box shown only in mobile view and Tablet view */
-	display: block;
-	text-align: right;
-	padding-right: 8px;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	width: 96%;
+	/* For showing anything only on mobile and tablet */
 }
 #content .notOnDesktop input {
 	height: 28px;
@@ -323,10 +360,6 @@ footer .bold{
 	padding-top: 0px;
 	float: none;
 	width: 96%;
-}
-#sidebar input {
-	/* Search box in sidebar */
-	display: none;
 }
 #mainwrapper #content #sidebar {
 	/* Sidebar*/

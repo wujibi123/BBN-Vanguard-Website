@@ -25,9 +25,25 @@ function scrollFunction() {
 }
 
 function showOptions () {
+	// called when the "advanced options" button is pressed
+	// shows filters
 	button.innerHTML = "Search";
 	searchForm.placeholder = "Article Name";
 	authorForm.style.display = "block";
 	typeForm.style.display = "block";
 	issueForm.style.display = "block";
+}
+
+function updatePage (id) {
+	// updates the page based on the genre
+	// acceptable ids: "home", "sports", "onCampus", "offCampus", "features" arts"
+	var idList = ["home", "sports", "onCampus", "offCampus", "features", "arts"];
+	for (var currentID in idList) {
+		if (idList[currentID] === id) {
+			document.getElementById(idList[currentID]).classList.add("active");
+		} else {
+			document.getElementById(idList[currentID]).classList.remove("active");
+		}
+
+	}
 }

@@ -18,9 +18,16 @@
   </head>
   <body>
     <div id="mainwrapper">
+	<header> 
+		<!--**************************************************************************
+		Header starts here. It contains Logo and 3 navigation links. 
+		****************************************************************************-->
+		<img src="assets/images/bbn_logo.svg" alt="sample logo">
+		<nav> <a href="./index.html" title="Link">Home</a> <a href="" title="Link">About</a> <a href="#" title="Link">Team</a><a href="#" title="Link">Subscribe</a> </nav>
+  	  </header>
       
       <div id="header">
-        <a href="/"><img src="assets/images/vanguard_logo.png" alt="Vanguard Logo" id="headerImg"/></a>
+        <a href="./index.html"><img src="assets/images/vanguard_logo.png" alt="Vanguard Logo" id="headerImg"/></a>
       </div>
       
       <div id="content">
@@ -51,12 +58,12 @@
           
           <nav>
             <ul>
-              <li><a href="#" title="Link">Home</a></li>
-              <li><a href="#" title="Link">Sports</a></li>
-              <li><a href="#" title="Link">On Campus</a></li>
-              <li><a href="#" title="Link">Off Campus</a></li>
-              <li><a href="#" title="Link">Features</a></li>
-              <li><a href="#" title="Link">Arts</a></li>
+              <li><a href="#" title="Link" class="active" id="home" onclick="updatePage('home');return false;">Home</a></li>
+              <li><a href="#" title="Link" id="sports" onclick="updatePage('sports');return false;">Sports</a></li>
+              <li><a href="#" title="Link" id="onCampus" onclick="updatePage('onCampus');return false;">On Campus</a></li>
+              <li><a href="#" title="Link" id="offCampus" onclick="updatePage('offCampus');return false;">Off Campus</a></li>
+              <li><a href="#" title="Link" id="features" onclick="updatePage('features');return false;">Features</a></li>
+              <li><a href="#" title="Link" id="arts" onclick="updatePage('arts');return false;">Arts</a></li>
             </ul>
           </nav>
           <input type="text" placeholder="Search" id="searchForm">

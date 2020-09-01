@@ -188,24 +188,20 @@ footer input {
 
 #subscribe {
 	border: none;
-	background-color:black;
-	border-radius:5px;
+	background-color:#f7a803;
+	border-radius:3px;
 	margin:0px;
-	height:114%;
 	color:white;
 	float:left;
-	padding-left: .625rem;
-    padding-right: .625rem;
+	padding: 0.9rem;
 	text-align: center;
 	overflow: hidden;
 	vertical-align: middle;
-	border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
 	transition: all .3s ease-in-out;
 }
 
 #subscribe:hover{
-	background-color:#F7A800;
+	background-color:#002e6c;
 }
 
 footer #column_3{

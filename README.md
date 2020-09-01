@@ -26,7 +26,9 @@ Strike through means completed
 		- A button that closes filters
 		- A button that submits filters
 		- Need to add logic to the filters
-			- Figure out how to retrieve the value from a **DataList**
+			- ~~Figure out how to retrieve the value from a **DataList**~~
+			- Use input.value to get the current value of the form.
+			- Can also program in the "enter" key by using addEventListener (enter keyCode = 13). See [tutorial](https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp).
 		- ~~Style the filters~~
 	- ~~Subscribe form needs to redirect to https://www.bbns.org/cf_forms/view.cfm?formID=303.~~
 	- *Fix scrollin side bar. Stutters a lot*

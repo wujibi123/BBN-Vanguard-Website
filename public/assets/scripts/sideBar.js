@@ -1,5 +1,9 @@
 // Get the sidebar
 var sidebar = document.getElementById("sidebar");
+var button = document.getElementById("sidebarButton");
+var searchForm = document.getElementById("searchForm");
+var authorForm = document.getElementById("authorForm");
+var issueForm = document.getElementById("issueForm");
 
 // When we scroll the window, the sidebar follows
 window.onscroll = function() {scrollFunction()};
@@ -17,4 +21,11 @@ function scrollFunction() {
 		// This makes sure that the sidebar is at the bottom as long as you're above a certain scrollTop
 		sidebar.style.marginTop = (document.getElementById("mainContent").offsetHeight - sidebar.offsetHeight) + "px";
 	}
+}
+
+function showOptions () {
+	button.innerHTML = "Apply Filters";
+	searchForm.placeholder = "Article Name";
+	authorForm.style.display = "block";
+	issueForm.style.display = "block";
 }

@@ -109,6 +109,14 @@ header nav a {
 	color: rgba(146,146,146,1.00);
 }
 
+#mainwrapper #content #sidebar #authorForm {
+	display: none;
+}
+
+#mainwrapper #content #sidebar #issueForm {
+	display: none;
+}
+
 nav ul li {
 	list-style-type: none;
 	padding-top: 8px;
@@ -192,7 +200,7 @@ footer input {
     appearance: button;
 
     text-decoration: none;
-    
+
 	border: none;
 	background-color:#f7a803;
 	border-radius:3px;

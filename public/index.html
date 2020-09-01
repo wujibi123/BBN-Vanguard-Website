@@ -59,8 +59,22 @@
               <li><a href="#" title="Link">Arts</a></li>
             </ul>
           </nav>
-          <input type="text" placeholder="Search">
-          <button type="button">Advanced Options</button>
+          <input type="text" placeholder="Search" id="searchForm">
+          <input type="text" placeholder="Author" id="authorForm">
+
+          <form id="issueForm">
+            <label for="issue">Article Issue:</label>
+            <input list="issues" name="issue" id="issue">
+            <datalist id="issues">
+              <option value="05/18/2019">
+              <option value="06/18/2019">
+              <option value="07/18/2019">
+              <option value="08/18/2019">
+            </datalist>
+            <input type="submit">
+          </form>
+
+          <button type="button" id="sidebarButton">Advanced Options</button>
         </section>
       </div>
       <footer id="footer">

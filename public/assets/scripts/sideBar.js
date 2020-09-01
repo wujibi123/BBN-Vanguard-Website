@@ -4,6 +4,7 @@ var button = document.getElementById("sidebarButton");
 var searchForm = document.getElementById("searchForm");
 var authorForm = document.getElementById("authorForm");
 var issueForm = document.getElementById("issueForm");
+var typeForm = document.getElementById("typeForm");
 
 // When we scroll the window, the sidebar follows
 window.onscroll = function() {scrollFunction()};
@@ -24,8 +25,9 @@ function scrollFunction() {
 }
 
 function showOptions () {
-	button.innerHTML = "Apply Filters";
+	button.innerHTML = "Search";
 	searchForm.placeholder = "Article Name";
 	authorForm.style.display = "block";
+	typeForm.style.display = "block";
 	issueForm.style.display = "block";
 }

@@ -62,18 +62,32 @@
           <input type="text" placeholder="Search" id="searchForm">
           <br>
           <input type="text" placeholder="Author" id="authorForm">
-
+		  
+		      <form id="typeForm">
+            <label for="type">Type:</label>
+            <input list="types" name="type" id="type">
+            <datalist id="types">
+              <option value="All">
+              <option value="Home">
+              <option value="Sports">
+              <option value="On Campus">
+      			  <option value="Off Campus">
+      			  <option value="Features">
+      			  <option value="Arts">
+            </datalist>
+          </form>
+			
           <form id="issueForm">
-            <label for="issue">Article Issue:</label>
+            <label for="issue">Issue:</label>
             <input list="issues" name="issue" id="issue">
             <datalist id="issues">
+              <option value="All">
               <option value="05/18/2019">
               <option value="06/18/2019">
               <option value="07/18/2019">
               <option value="08/18/2019">
             </datalist>
           </form>
-
           <button type="button" id="sidebarButton" onclick="showOptions()">Advanced Options</button>
         </section>
       </div>

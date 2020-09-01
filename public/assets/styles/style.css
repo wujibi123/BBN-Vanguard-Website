@@ -108,12 +108,40 @@ header nav a {
 	background-color: lightyellow;
 	color: rgba(146,146,146,1.00);
 }
+#mainwrapper #content #sidebar form {
+	width:100%;
+}
+
+#mainwrapper #content #sidebar form label {
+	font: inherit;
+	color: rgba(146,146,146,1.00);
+	text-align:left;
+	display: inline-block;
+	width:40%;
+	padding-top:10px;
+	float:left;
+	font-size:100%;
+	overflow:hidden;
+	white-space:nowrap
+}
+
+#mainwrapper #content #sidebar form input{
+	width:50%;
+	float:right;
+	display: inline-block;
+	height:20px;
+	margin-top:5px;
+}
 
 #mainwrapper #content #sidebar #authorForm {
 	display: none;
 }
 
 #mainwrapper #content #sidebar #issueForm {
+	display: none;
+}
+
+#mainwrapper #content #sidebar #typeForm {
 	display: none;
 }
 

@@ -27,7 +27,7 @@ Strike through means completed
 		- A button that submits filters
 		- Need to add logic to the filters
 			- Figure out how to retrieve the value from a **DataList**
-		- Style the filters
+		- ~~Style the filters~~
 	- ~~Subscribe form needs to redirect to https://www.bbns.org/cf_forms/view.cfm?formID=303.~~
 	- *Fix scrollin side bar. Stutters a lot*
 		- Not completely fixed, but smooth enough

@@ -187,6 +187,12 @@ footer input {
 }
 
 #subscribe {
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    
 	border: none;
 	background-color:#f7a803;
 	border-radius:3px;

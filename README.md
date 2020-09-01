@@ -21,11 +21,15 @@ Strike through means completed
     - Search Bar
     	- User can search up article names, and they will get the articles with the closest match
 	- Advanced Options
-		- A button that reveals filters
-		- Issues, Authors, and Topic (Sports, On Campus, Off Campus, Feautures, Arts)
-	- Subscribe form needs to redirect to https://www.bbns.org/cf_forms/view.cfm?formID=303.
-	- Fix scrollin side bar. Stutters a lot
-		- Perhaps try turning "sticky" on/off.
+		- ~~A button that reveals filters~~
+		- ~~Issues, Authors,~~ and Topic (Sports, On Campus, Off Campus, Feautures, Arts)
+		- Need to add logic to the filters
+			- Figure out how to retrieve the value from a **DataList**
+		- Style the filters
+	- ~~Subscribe form needs to redirect to https://www.bbns.org/cf_forms/view.cfm?formID=303.~~
+	- *Fix scrollin side bar. Stutters a lot*
+		- Not completely fixed, but smooth enough
+		- Using Sticky would make it super smooth, do this later.
 
 - Use GSAP to animate webpage
 - Use @media to design webpage for the phone, use BCT's css for inspiration

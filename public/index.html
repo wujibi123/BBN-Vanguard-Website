@@ -18,12 +18,12 @@
   </head>
   <body>
     <div id="mainwrapper">
-	<header> 
-		<!--**************************************************************************
-		Header starts here. It contains Logo and 3 navigation links. 
-		****************************************************************************-->
-		<img src="assets/images/bbn_logo.svg" alt="sample logo">
-		<nav> <a href="./index.html" title="Link">Home</a> <a href="" title="Link">About</a> <a href="#" title="Link">Team</a><a href="#" title="Link">Subscribe</a> </nav>
+	     <header> 
+      		<!--**************************************************************************
+      		Header starts here. It contains Logo and 3 navigation links. 
+      		****************************************************************************-->
+      		<img src="assets/images/bbn_logo.svg" alt="sample logo">
+      		<nav> <a href="./index.html" title="Link">Home</a> <a href="" title="Link">About</a> <a href="#" title="Link">Team</a><a href="#" title="Link">Subscribe</a> </nav>
   	  </header>
       
       <div id="header">
@@ -45,10 +45,17 @@
           <p>The expiration of Predict just weeks before the advent of the pandemic prompted wide criticism among scientists, who noted that the coronavirus is exactly the sort of catastrophic animal virus the program was designed to head off.</p>
           <p>The American response to pandemics is strangely fragmented. The C.D.C. investigates outbreaks, while the National Institute of Allergy and Infectious Diseases pursues vaccines. Much research into tropical diseases and bioweapons is done by the military, legacies of the Spanish-American War and the Cold War, while the State Department coordinates global campaigns against AIDS.</p>
           <p>In the public health arena, USAID is home to programs like the President’s Malaria Initiative and campaigns to bring clean drinking water to rural villages. But those programs rely on long-established interventions, like well-drilling, mosquito nets and anti-malaria drugs.</p>
+
+          <script>
+          for (var i = 0; i < 10; i++) { // hardcoding number of tutors: TODO: Change it
+            document.write(`
+              <h1 id="title_${i}"></h1>
+              <iframe src="" style="height:  600px; display: none;" frameborder="0" id="article_${i}"></iframe>`);
+          }
+          //https://drive.google.com/file/d/1UPvP3O2FMz2VAeXTOT016IhXz-qMUE2z/preview
+          </script>
           
-          <h1>Article Name</h1>
           
-          <iframe src="https://drive.google.com/file/d/1UPvP3O2FMz2VAeXTOT016IhXz-qMUE2z/preview" style="height:  600px;" frameborder="0" id="1"></iframe>
         
         </section>
         <section id="sidebar"> 
@@ -132,40 +139,6 @@
     </div>
 
     <script src="./assets/scripts/sideBar.js"></script>
-
-    <script>
-      /*
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyA8w9vt-l10fU42j_8AuUuzWNqoIG3A-WU",
-        authDomain: "bbn-vanguard.firebaseapp.com",
-        databaseURL: "https://bbn-vanguard.firebaseio.com",
-        projectId: "bbn-vanguard",
-        storageBucket: "bbn-vanguard.appspot.com",
-        messagingSenderId: "991286379575",
-        appId: "1:991286379575:web:50ad92b8e0eb05aac2ebb2",
-        measurementId: "G-EXBV0XV8HM"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      var db = firebase.firestore();
-
-      // Initialize Cloud Functions through Firebase
-      var functions = firebase.functions();
-
-      var docRef = db.collection("data").doc("articles");
-
-      docRef.get().then(function(doc) {
-          if (doc.exists) {
-              console.log("Document data:", doc.data());
-              document.getElementById("1").src = doc.data().article1.link;
-          } else {
-              // doc.data() will be undefined in this case
-              console.log("No such document!");
-          }
-      }).catch(function(error) {
-          console.log("Error getting document:", error);
-      });*/
-    </script>
+    <script src="./assets/scripts/database.js"></script>
   </body>
 </html>

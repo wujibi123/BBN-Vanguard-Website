@@ -36,7 +36,7 @@ function showOptions () {
 
 function updatePage (id) {
 	// updates the page based on the genre
-	// acceptable ids: "home", "sports", "onCampus", "offCampus", "features" arts"
+	// acceptable ids: "home", "sports", "onCampus", "offCampus", "features", arts"
 	var idList = ["home", "sports", "onCampus", "offCampus", "features", "arts"];
 	for (var currentID in idList) {
 		if (idList[currentID] === id) {

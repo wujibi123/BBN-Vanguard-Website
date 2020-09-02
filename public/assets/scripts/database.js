@@ -16,17 +16,21 @@ var db = firebase.firestore();
 // Initialize Cloud Functions through Firebase
 var functions = firebase.functions();
 
-var docRef = db.collection("data").doc("articles");
-var nameQuery = docRef.orderBy("name");
+var articlesRef = db.collection("articles");
 
-docRef.get().then(function(querySnapshot) {
+articlesRef.orderBy("issue", "desc").orderBy("name") // On home page, show articles by issue alphabetically
+  .get().then(function(querySnapshot) { // Showing articles
     var i = 0;
     querySnapshot.forEach(function(doc) {
-        i++;
-        console.log(i);
         console.log("Document data:", doc.data());
-        document.getElementById("article_1").src = doc.data().link;
+        document.getElementById("title_" + i).innerHTML = doc.data().name;
+        document.getElementById("issue_" + i).innerHTML = doc.data().issue.toDate().toLocaleDateString();
+        document.getElementById("article_" + i).src = doc.data().link;
+        document.getElementById("article_" + i).style.display = "block";
+        i++
     })
-}).catch(function(error) {
+  }).catch(function(error) {
     console.log("Error getting document:", error);
-});
+  });
+
+//function filterType

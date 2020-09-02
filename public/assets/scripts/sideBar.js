@@ -41,10 +41,13 @@ function updatePage (id) {
 	for (var currentID in idList) {
 		if (idList[currentID] === id) {
 			document.getElementById(idList[currentID]).classList.add("active");
-			filterType(currentID);
+			//filterGenre(idList[currentID]));
 		} else {
 			document.getElementById(idList[currentID]).classList.remove("active");
 		}
-
 	}
 }
+/*
+function filterGenre(genre) {
+
+}*/

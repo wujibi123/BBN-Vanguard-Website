@@ -18,6 +18,9 @@ Strike through means completed
 - Improve Design of the website
 	- Single one page app
 		- Switch between "pages" by simply changing the innerHTML. Each switch is just displaying different documents.
+		- Home page shows whole Issues
+		- Filters show different articles
+		- Search bar can also dig up issues if user types in "volume #"
     - Search Bar
     	- User can search up article names, and they will get the articles with the closest match
 	- Advanced Options
@@ -42,10 +45,12 @@ Strike through means completed
 		- *Can't use the real time database because there's no blocking function for retrieving data*
 		- ~~Creat Testing Version of the Database~~
 		- ~~Show PDF on page~~
-		- Use firebase Querys to systematically show articles by date
-		- **Later, after design is done**
-			- Write the real database
-			- Sort articles by title, issue, and name
+		- ~Use firebase Querys to systematically show articles by date~
+		- Write the real database
+			- Issues (collections) --> articles (collections) --> individual articles (doc)
+				- Each issue also has fields (link, volume, date)
+				- Each individual article has (link, volume, date, type, name, author)
+		- Sort articles by title, issue, and name
 - Write sorting and filtering algorithm for the articles
 
 ## NOTES

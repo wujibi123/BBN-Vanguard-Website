@@ -18,13 +18,13 @@ var functions = firebase.functions();
 
 var articlesRef = db.collection("articles");
 
-articlesRef.orderBy("issue", "desc").orderBy("name") // On home page, show articles by issue alphabetically
+articlesRef.orderBy("issue", "desc") // On home page, show articles by issue alphabetically
   .get().then(function(querySnapshot) { // Showing articles
     var i = 0;
     querySnapshot.forEach(function(doc) {
         console.log("Document data:", doc.data());
-        document.getElementById("title_" + i).innerHTML = doc.data().name;
         document.getElementById("issue_" + i).innerHTML = doc.data().issue.toDate().toLocaleDateString();
+        document.getElementById("volume_" + i).innerHTML = "Volume " + doc.data().volume;
         document.getElementById("article_" + i).src = doc.data().link;
         document.getElementById("article_" + i).style.display = "block";
         i++

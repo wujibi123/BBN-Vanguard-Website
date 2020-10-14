@@ -7,7 +7,7 @@
 
     <!-- update the version number as needed -->
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
+    <!-- include only the Firebase Features as you need -->
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-functions.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
@@ -20,10 +20,10 @@
     <div id="mainwrapper">
 	     <header> 
       		<!--**************************************************************************
-      		Header starts here. It contains Logo and 3 navigation links. 
+      		Header stArts here. It contains Logo and 3 navigation links. 
       		****************************************************************************-->
       		<img src="assets/images/bbn_logo.svg" alt="sample logo">
-      		<nav> <a href="./index.html" title="Link">Home</a> <a href="" title="Link">About</a> <a href="#" title="Link">Team</a><a href="#" title="Link">Subscribe</a> </nav>
+      		<nav> <a href="./index.html" title="Link">Home</a> <!--<a href="#">About</a> <a href="#">Team</a>--><a target="_blank" rel="noopener noreferrer" href="https://www.bbns.org/cf_forms/view.cfm?formID=303">Subscribe</a> </nav>
   	  </header>
       
       <div id="header">
@@ -38,13 +38,15 @@
         
         <section id="mainContent"> 
           <!--************************************************************************
-        Main Blog content starts here
+        Main Blog content stArts here
         ****************************************************************************-->
           <div id="bannerImage"><img src="assets/images/bbn_school.png" alt=""/></div>
           <p>The Vanguard is ...</p>
           <p>The expiration of Predict just weeks before the advent of the pandemic prompted wide criticism among scientists, who noted that the coronavirus is exactly the sort of catastrophic animal virus the program was designed to head off.</p>
           <p>The American response to pandemics is strangely fragmented. The C.D.C. investigates outbreaks, while the National Institute of Allergy and Infectious Diseases pursues vaccines. Much research into tropical diseases and bioweapons is done by the military, legacies of the Spanish-American War and the Cold War, while the State Department coordinates global campaigns against AIDS.</p>
           <p>In the public health arena, USAID is home to programs like the President’s Malaria Initiative and campaigns to bring clean drinking water to rural villages. But those programs rely on long-established interventions, like well-drilling, mosquito nets and anti-malaria drugs.</p>
+
+          <h1 id="homeHeader">Checkout our latest issues!</h1>
 
           <h1 id="issue_0"></h1>
           <p id="volume_0"></p>
@@ -93,34 +95,35 @@
         </section>
         <section id="sidebar"> 
           <!--************************************************************************
-        Sidebar starts here. It contains a searchbox, sample ad image and 6 links
+        Sidebar stArts here. It contains a searchbox, sample ad image and 6 links
         ****************************************************************************-->
           
           <nav>
             <ul>
-              <li><a href="#" title="Link" class="active" id="home" onclick="updatePage('home');return false;">Home</a></li>
-              <li><a href="#" title="Link" id="sports" onclick="updatePage('sports');return false;">Sports</a></li>
-              <li><a href="#" title="Link" id="onCampus" onclick="updatePage('onCampus');return false;">On Campus</a></li>
-              <li><a href="#" title="Link" id="offCampus" onclick="updatePage('offCampus');return false;">Off Campus</a></li>
-              <li><a href="#" title="Link" id="features" onclick="updatePage('features');return false;">Features</a></li>
-              <li><a href="#" title="Link" id="arts" onclick="updatePage('arts');return false;">Arts</a></li>
+              <li><a href="#" title="Link" class="active" id="Home" onclick="updatePage('Home');return false;">Home</a></li>
+              <li><a href="#" title="Link" id="Sports" onclick="updatePage('Sports');return false;">Sports</a></li>
+              <li><a href="#" title="Link" id="On Campus" onclick="updatePage('On Campus');return false;">On Campus</a></li>
+              <li><a href="#" title="Link" id="Off Campus" onclick="updatePage('Off Campus');return false;">Off Campus</a></li>
+              <li><a href="#" title="Link" id="Features" onclick="updatePage('Features');return false;">Features</a></li>
+              <li><a href="#" title="Link" id="Arts" onclick="updatePage('Arts');return false;">Arts</a></li>
             </ul>
           </nav>
-          <input type="text" placeholder="Search" id="searchForm">
-          <br>
-          <input type="text" placeholder="Author" id="authorForm">
+          <!--<input type="text" placeholder="Search" id="searchForm" style="display: none;">-->
+          <!--<br>-->
+          <!--<input type="text" placeholder="Author" id="authorForm">-->
 		  
 		      <form id="typeForm">
             <label for="type">Type:</label>
             <input list="types" name="type" id="type">
             <datalist id="types">
               <option value="All">
-              <option value="Home">
               <option value="Sports">
               <option value="On Campus">
       			  <option value="Off Campus">
       			  <option value="Features">
       			  <option value="Arts">
+              <option value="Current Topics">
+              <option value="The Back Page">
             </datalist>
           </form>
 			
@@ -129,10 +132,7 @@
             <input list="issues" name="issue" id="issue">
             <datalist id="issues">
               <option value="All">
-              <option value="05/18/2019">
-              <option value="06/18/2019">
-              <option value="07/18/2019">
-              <option value="08/18/2019">
+              <option value="September 1, 2020">
             </datalist>
           </form>
           <button type="button" id="sidebarButton" onclick="showOptions()">Advanced Options</button>
@@ -173,5 +173,7 @@
 
     <script src="./assets/scripts/sideBar.js"></script>
     <script src="./assets/scripts/database.js"></script>
+    <!--<script src="./assets/scripts/addData.js"></script>-->
+
   </body>
 </html>

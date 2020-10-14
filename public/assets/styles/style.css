@@ -161,6 +161,11 @@ header img {
 	display: none;
 }
 
+#homeHeader {
+	font-size: 60px;
+	font-height: 40px;
+}
+
 .active{
     border-bottom: 2px solid #004DF5;
     color: #41444b;

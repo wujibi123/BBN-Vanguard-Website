@@ -17,12 +17,36 @@ var db = firebase.firestore();
 var functions = firebase.functions();
 
 var articlesRef = db.collection("articles");
+var issuesRef = db.collection("issues");
 
-articlesRef.orderBy("issue", "desc") // On home page, show articles by issue alphabetically
+showHome();
+
+function showHome() {
+  hideBlocks();
+  document.getElementById("homeHeader").style = "display: block";
+  issuesRef.orderBy("date", "desc") // On home page, show articles by issue alphabetically
   .get().then(function(querySnapshot) { // Showing articles
     var i = 0;
     querySnapshot.forEach(function(doc) {
-        console.log("Document data:", doc.data());
+        document.getElementById("issue_" + i).innerHTML = doc.data().date.toDate().toLocaleDateString();
+        document.getElementById("volume_" + i).innerHTML = "Volume " + doc.data().volume;
+        document.getElementById("article_" + i).src = doc.data().link;
+        document.getElementById("article_" + i).style.display = "block";
+        i++
+    })
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
+}
+
+function showCategory(type) {
+  //valid types: "Home", "Sports", "On Campus", "Off Campus", "Features", "Arts", "The Back Page", "Current Topics"
+  document.getElementById("homeHeader").style = "display: none";
+  hideBlocks();
+  articlesRef.where("type", "==", type).orderBy("issue", "desc")
+  .get().then(function(querySnapshot) { // Showing articles
+    var i = 0;
+    querySnapshot.forEach(function(doc) {
         document.getElementById("issue_" + i).innerHTML = doc.data().issue.toDate().toLocaleDateString();
         document.getElementById("volume_" + i).innerHTML = "Volume " + doc.data().volume;
         document.getElementById("article_" + i).src = doc.data().link;
@@ -32,5 +56,42 @@ articlesRef.orderBy("issue", "desc") // On home page, show articles by issue alp
   }).catch(function(error) {
     console.log("Error getting document:", error);
   });
+}
 
+function advancedSearch(type, issue) {
+  //valid types: "Home", "Sports", "On Campus", "Off Campus", "Features", "Arts", "The Back Page", "Current Topics"
+  hideBlocks();
+  var query;
+
+  if ((type === "All" || type === "") && (issue === "All" || issue === "")) {
+    query = articlesRef.orderBy("issue", "desc");
+  } else if ((type === "All" || type === "") && (issue != "All" || issue != "")) {
+    query = articlesRef.where("issue", "==", firebase.firestore.Timestamp.fromDate(new Date(issue))).orderBy("type");
+  } else if ((type != "All" || type != "") && (issue === "All" || issue === "")) {
+    query = articlesRef.where("type", "==", type).orderBy("issue", "desc");
+  } else {
+    query = articlesRef.where("issue", "==", firebase.firestore.Timestamp.fromDate(new Date(issue))).where("type", "==", type);
+  }
+
+  query.get().then(function(querySnapshot) { // Showing articles
+    var i = 0;
+    querySnapshot.forEach(function(doc) {
+        document.getElementById("issue_" + i).innerHTML = doc.data().issue.toDate().toLocaleDateString();
+        document.getElementById("volume_" + i).innerHTML = "Volume " + doc.data().volume;
+        document.getElementById("article_" + i).src = doc.data().link;
+        document.getElementById("article_" + i).style.display = "block";
+        i++
+    })
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
+  });
+}
+
+function hideBlocks() {
+  for (var i = 0; i <= 10; i++) {
+    document.getElementById("issue_" + i).innerHTML = "";
+    document.getElementById("volume_" + i).innerHTML = "";
+    document.getElementById("article_" + i).style.display = "none";
+  }
+}
 //function filterType

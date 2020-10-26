@@ -59,7 +59,8 @@ function showCategory(type) {
 }
 
 function advancedSearch(type, issue) {
-  //valid types: "Home", "Sports", "On Campus", "Off Campus", "Features", "Arts", "The Back Page", "Current Topics"
+  //valid types: "All", "Sports", "On Campus", "Off Campus", "Features", "Arts", "The Back Page", "Current Topics"
+  document.getElementById("homeHeader").innerHTML = type;
   hideBlocks();
   var query;
 

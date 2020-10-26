@@ -458,10 +458,13 @@ footer .bold{
 }
 #mainwrapper header nav {
 	/*navigation links in header */
-	text-align: center;
-	background-color: rgba(255,255,255,1.00);
-	width: 98%;
+	width: 50%;
 }
+
+#homeHeader {
+	font-size:30px;
+}
+
 #content #sidebar nav {
 	/* Navigation bar for links in sidebar */
 	width: 36%;

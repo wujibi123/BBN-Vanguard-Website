@@ -60,6 +60,7 @@ function showCategory(type) {
 
 function advancedSearch(type, issue) {
   //valid types: "All", "Sports", "On Campus", "Off Campus", "Features", "Arts", "The Back Page", "Current Topics"
+
   document.getElementById("homeHeader").innerHTML = type;
   hideBlocks();
   var query;

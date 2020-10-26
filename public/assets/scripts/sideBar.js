@@ -34,6 +34,11 @@ function scrollFunction() {
 function showOptions () {
 	if (button.innerHTML === "Search") { // search if the button is currently intended for that function
 		advancedSearch(typeInput.value, issueInput.value);
+		window.scroll({
+		  top: 0, 
+		  left: 0, 
+		  behavior: 'smooth'
+		});
 	}
 
 	// otherwise show options

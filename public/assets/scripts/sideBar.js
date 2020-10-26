@@ -27,7 +27,7 @@ function scrollFunction() {
 			sidebar.style.marginTop = (document.getElementById("mainContent").offsetHeight - sidebar.offsetHeight) + "px";
 		}
 	} else {
-		sidebar.style.marginTop = "3px";
+		sidebar.style.marginTop = "10px";
 	}
 }
 

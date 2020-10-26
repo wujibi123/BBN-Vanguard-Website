@@ -17,6 +17,7 @@
     <script src="https://kit.fontawesome.com/9cbf0b77ec.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div style="display: none" id="top"></div>
     <div id="mainwrapper">
 	     <header> 
       		<!--**************************************************************************
@@ -31,20 +32,13 @@
       </div>
       
       <div id="content">
-        <div class="notOnDesktop"> 
-          <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
-          <input type="text" placeholder="Search">
-        </div>
         
         <section id="mainContent"> 
           <!--************************************************************************
         Main Blog content stArts here
         ****************************************************************************-->
           <div id="bannerImage"><img src="assets/images/bbn_school.png" alt=""/></div>
-          <p>The Vanguard is ...</p>
-          <p>The expiration of Predict just weeks before the advent of the pandemic prompted wide criticism among scientists, who noted that the coronavirus is exactly the sort of catastrophic animal virus the program was designed to head off.</p>
-          <p>The American response to pandemics is strangely fragmented. The C.D.C. investigates outbreaks, while the National Institute of Allergy and Infectious Diseases pursues vaccines. Much research into tropical diseases and bioweapons is done by the military, legacies of the Spanish-American War and the Cold War, while the State Department coordinates global campaigns against AIDS.</p>
-          <p>In the public health arena, USAID is home to programs like the President’s Malaria Initiative and campaigns to bring clean drinking water to rural villages. But those programs rely on long-established interventions, like well-drilling, mosquito nets and anti-malaria drugs.</p>
+          <p>The Vanguard is ... Hopefully there will be a few paragraphs here so the design doesn't look too often.</p>
 
           <h1 id="homeHeader">Checkout our latest issues!</h1>
 
@@ -100,19 +94,19 @@
           
           <nav>
             <ul>
-              <li><a href="#" title="Link" class="active" id="Home" onclick="updatePage('Home');return false;">Home</a></li>
-              <li><a href="#" title="Link" id="Sports" onclick="updatePage('Sports');return false;">Sports</a></li>
-              <li><a href="#" title="Link" id="On Campus" onclick="updatePage('On Campus');return false;">On Campus</a></li>
-              <li><a href="#" title="Link" id="Off Campus" onclick="updatePage('Off Campus');return false;">Off Campus</a></li>
-              <li><a href="#" title="Link" id="Features" onclick="updatePage('Features');return false;">Features</a></li>
-              <li><a href="#" title="Link" id="Arts" onclick="updatePage('Arts');return false;">Arts</a></li>
+              <li><a href="#bannerImage" title="Link" class="active" id="Home" onclick="updatePage('Home');return false;">Home</a></li>
+              <li><a href="#bannerImage" title="Link" id="Sports" onclick="updatePage('Sports');return false;">Sports</a></li>
+              <li><a href="#bannerImage" title="Link" id="On Campus" onclick="updatePage('On Campus');return false;">On Campus</a></li>
+              <li><a href="#bannerImage" title="Link" id="Off Campus" onclick="updatePage('Off Campus');return false;">Off Campus</a></li>
+              <li><a href="#bannerImage" title="Link" id="Features" onclick="updatePage('Features');return false;">Features</a></li>
+              <li><a href="#bannerImage" title="Link" id="Arts" onclick="updatePage('Arts');return false;">Arts</a></li>
             </ul>
           </nav>
           <!--<input type="text" placeholder="Search" id="searchForm" style="display: none;">-->
           <!--<br>-->
           <!--<input type="text" placeholder="Author" id="authorForm">-->
 		  
-		      <form id="typeForm">
+		      <form id="typeForm" class="notOnDesktop">
             <label for="type">Type:</label>
             <input list="types" name="type" id="type">
             <datalist id="types">
@@ -127,7 +121,7 @@
             </datalist>
           </form>
 			
-          <form id="issueForm">
+          <form id="issueForm" class="notOnDesktop">
             <label for="issue">Issue:</label>
             <input list="issues" name="issue" id="issue">
             <datalist id="issues">
@@ -135,12 +129,12 @@
               <option value="September 1, 2020">
             </datalist>
           </form>
-          <button type="button" id="sidebarButton" onclick="showOptions()">Advanced Options</button>
+          <button class="notOnDesktop" type="button" id="sidebarButton" onclick="showOptions()">Advanced Options</button>
         </section>
       </div>
       <footer id="footer">
         <div id="column_1">
-          <img src="assets/images/bbn_logo.svg" alt="bbn_logo">
+          <img class="center" src="assets/images/bbn_logo.svg" alt="bbn_logo">
           <br>
           <span>Buckingham Browne and Nichols School</span>
           <br>
@@ -152,7 +146,7 @@
           <a target="_blank" rel="noopener noreferrer" href="https://www.bbns.org/cf_forms/view.cfm?formID=303" id="subscribe">Subscribe</a>
           <br>
           <br>
-          <br>
+          <br class="notOnDesktop">
           <span>Subscribe to the Vanguard</span>
           <span>newsletter for future issues</span>
         </div>
@@ -162,10 +156,10 @@
             <a href="facebook.com"><i class="fab fa-facebook-square fa-3x" id="facebook"></i></a>
           <span style="text-align:center">Copyright &copy; BBN Vanguard</span>
           <br>
-          <br>
-          <br>
-          <br>
-          <span style="text-align:right">Created by <a href="https://github.com/wujibi123">Dan Bi</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <br class="notOnDesktop">
+          <br class="notOnDesktop">
+          <br class="notOnDesktop">
+          <span id="creator">Created by <a href="https://github.com/wujibi123">Dan Bi</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </div>
           
       </footer>

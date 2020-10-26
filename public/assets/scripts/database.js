@@ -23,7 +23,7 @@ showHome();
 
 function showHome() {
   hideBlocks();
-  document.getElementById("homeHeader").style = "display: block";
+  document.getElementById("homeHeader").innerHTML = "Checkout our latest issues!";
   issuesRef.orderBy("date", "desc") // On home page, show articles by issue alphabetically
   .get().then(function(querySnapshot) { // Showing articles
     var i = 0;
@@ -41,7 +41,7 @@ function showHome() {
 
 function showCategory(type) {
   //valid types: "Home", "Sports", "On Campus", "Off Campus", "Features", "Arts", "The Back Page", "Current Topics"
-  document.getElementById("homeHeader").style = "display: none";
+  document.getElementById("homeHeader").innerHTML = type;
   hideBlocks();
   articlesRef.where("type", "==", type).orderBy("issue", "desc")
   .get().then(function(querySnapshot) { // Showing articles
